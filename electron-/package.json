@@ -1,0 +1,40 @@
+{
+    "name": "HSIBOT",
+    "version": "1.0.2",
+    "description": "A minimal Electron application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron main.js --DEV",
+        "test": "node ./app.js --prod",
+        "exe": "npm run package-win && npm run win-installer",
+        "ubuntu": "npm run package-linux",
+        "mac": "npm run package-mac && npm run mac-dmg",
+        "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64  --prune=true --out=release-builds",
+        "package-win": "npx electron-packager . ECOM_Bot --overwrite --asar --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ECOM_Bot\"  --icon=./assets/icons/humonics_logo_icon.ico",
+        "package-linux": "electron-packager . ECOM_Bot --overwrite --asar=true --platform=linux --arch=x64  --prune=true --out=release-builds",
+        "win-installer": "node build.js --platform=window",
+        "mac-dmg": "node build.js --platform=mac"
+    },
+    "repository": "https://github.com/electron/electron-quick-start",
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "author": "Hitachi",
+    "manufacturer": "Hitachi",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^28.2.0",
+        "electron-installer-dmg": "^3.0.0",
+        "electron-packager": "^17.1.2",
+        "minimist": "^1.2.0"
+    },
+    "dependencies": {
+        "base64topdf": "^1.1.8",
+        "electron-winstaller": "^5.2.1",
+        "node-notifier": "^10.0.1"
+    }
+}

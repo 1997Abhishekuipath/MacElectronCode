@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+<meta charset="UTF-8"/>
+<!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline';"/!-->
+</head>
+<style>
+  html, body, webview {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  </style>
+<body style="height:100%;overflow: hidden;margin: 0px;">
+    <!--<webview id="myweb" class="hidden"  style="height:100%; padding: 0%;" src="https://itmatec.hitachi-systems.co.in/chat/index.html?web_uid=488bb99b-8b93-44d1-8f1c-117c74b814f4/agentId={&quot;web_uid&quot;:&quot;488bb99b-8b93-44d1-8f1c-117c74b814f4&quot;}">
+    </webview>-->
+    <iframe id="webview" class="hidden" src="https://github.com"></ifrane>
+  <!--<script src="./app.js"></script>-->
+  <script>
+    var webview = document.getElementById('myweb');
+
+    // webview.addEventListener('dom-ready', function () {
+    //   // webview.getElementsByClassName("chat-box-header").innerText = "New Bot"
+    //     webview.insertCSS(`
+    //     .btn{background-color: #2d2d2d !important;
+    //       width: 190px !important;}
+    //     .logo{
+    //       width: 47px !important;
+    //       height: 40px !important;
+    //       margin-left: 5px !important;
+    //       padding: 1px !important;
+    //     }
+    //      `)
+    // });
+</script>
+
+</body>
+<script>
+  setTimeout(() => {
+    const webview = document.getElementById('webview');
+    webview.style.visibility = 'visible';
+  }, 5000);
+  </script>
+</html>

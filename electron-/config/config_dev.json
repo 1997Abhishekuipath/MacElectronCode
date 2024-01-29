@@ -1,0 +1,9 @@
+{
+    "BOT_URL": "https://itmatec.hitachi-systems.co.in/chat/index.html",
+    "web_uid" : "488bb99b-8b93-44d1-8f1c-117c74b814f4",
+    "bot_name":"HSI BOT",
+    "AGENT_INSTALL_PATH_WINDOW": "C:/Program Files (x86)/Kaseya/HTMC0114166534657264/KaseyaD.ini",
+    "AGENT_INSTALL_PATH_LUNIX": "/opt/Kaseya/HTMC0114166534657264/etc/KaseyaD.ini",
+    "AGENT_INSTALL_PATH_MAC": "/Library/Preferences/KaseyaD.ini"
+}
+
